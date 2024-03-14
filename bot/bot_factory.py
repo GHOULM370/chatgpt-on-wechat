@@ -55,6 +55,9 @@ def create_bot(bot_type):
     elif bot_type == const.ZHIPU_AI:
         from bot.zhipuai.zhipuai_bot import ZHIPUAIBot
         return ZHIPUAIBot()
-
+    else:
+        # oneAPI模型
+        from bot.chatgpt.chat_gpt_bot import ChatGPTBot
+        return ChatGPTBot()
 
     raise RuntimeError
